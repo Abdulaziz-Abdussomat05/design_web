@@ -9,8 +9,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+  <script src="./js/main.js"></script>
   <!-- Header section start -->
-
+  <div class="loader">
+    <div class="lds-hourglass"></div>
+  </div>
   <header>
 <nav class="navbar">
   <div class="container">
@@ -174,7 +177,7 @@
               <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis libero quas ipsum laudantium nihil! Quaerat.
               </p>
-              <a href="#">
+              <a data-modal="">
                 Read more
               </a>
             </div>
@@ -196,7 +199,7 @@
               <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis libero quas ipsum laudantium nihil! Quaerat.
               </p>
-              <a href="#">
+              <a data-modal="" >
                 Read more
               </a>
             </div>
@@ -218,7 +221,7 @@
               <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis libero quas ipsum laudantium nihil! Quaerat.
               </p>
-              <a href="#">
+              <a data-modal="" >
                 Read more
               </a>
             </div>
@@ -240,7 +243,7 @@
               <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis libero quas ipsum laudantium nihil! Quaerat.
               </p>
-              <a href="#">
+              <a data-modal="" >
                 Read more
               </a>
             </div>
@@ -262,7 +265,7 @@
               <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis libero quas ipsum laudantium nihil! Quaerat.
               </p>
-              <a href="#">
+              <a data-modal="">
                 Read more
               </a>
             </div>
@@ -284,7 +287,7 @@
               <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis libero quas ipsum laudantium nihil! Quaerat.
               </p>
-              <a href="#">
+              <a data-modal="">
                 Read more
               </a>
             </div>
@@ -329,5 +332,30 @@
       Full Stack blog
     </span>
   </footer>
+  <div class="modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form action="#">
+          <div data-close="" class="modal-close">&times;</div>
+          <div class="modal-title">We will answer you InshaAllah!</div>
+          <input
+          required
+          placeholder="Your Name"
+          name="name"
+          type="text"
+          class="modal__input"
+        />
+        <input
+          required
+          placeholder="Your Mobile Phone"
+          name="phone"
+          type="phone"
+          class="modal__input"
+        />
+        <button class="btn btn_dark btn_min">Call Me</button>
+        </form>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
