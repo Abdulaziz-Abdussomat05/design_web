@@ -41,4 +41,20 @@ modal.addEventListener("click", (e) => {
 
 const timeModalOut = setTimeout(openModal, 5000)
 
+const menuBtn = document.querySelector(".menu-btn")
+const navigation = document.querySelector(".navbar-nav")
+const navItem = document.querySelectorAll(".navbar-nav a")
+
+menuBtn.addEventListener("click", () => {
+    menuBtn.classList.toggle("active")
+    navigation.classList.toggle("active")
+})
+
+navItem.forEach(navigationItem => {
+    navigationItem.addEventListener("click", () => {
+        menuBtn.classList.remove("active")
+        navigation.classList.remove("active")
+    })
+})
+
 })

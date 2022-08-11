@@ -86,9 +86,9 @@ img {
 
 header{
   height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url(images/banner-bg.jpg);
-  background-position: center;
-  background-size: cover;
+  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0)),url(images/Ustozbg.jpg);
+  background-position: top;
+  background-size: contain;
   background-repeat: no-repeat;
 
 }
@@ -161,6 +161,8 @@ transition: opacity 0.5s;
   font-family: var(--roboto);
   font-weight: 300;
   word-spacing: 2px;
+  width: 70%;
+  margin: auto;
 }
 
 .banner form {
@@ -480,9 +482,7 @@ footer span {
 }
 
 @media only screen and (max-width: 800px){
-  .navbar-nav a{
-    display: none;
-  }
+ 
 
   .navbar-nav i {
     display: block;
@@ -511,5 +511,62 @@ footer span {
     grid-template-columns: 100%;
     column-gap: 3rem;
     align-items: center;
+  }
+
+  header .navbar-nav {
+    display: none;
+  }
+
+  
+  header .navbar-nav.active {
+z-index: 888;
+position: fixed;
+background: #fff;
+top: 0;
+right: 0;
+width: 380px;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+transition: .3s ease;
+  }
+
+  .navbar .navbar-nav a {
+    color: #000;
+    font-size: 22px;
+    margin: 10px;
+    padding: 0 20px;
+    border-radius: 20px;
+
+  }
+  header .navbar-nav a:hover {
+    background: crimson;
+    color: #fff;
+  }
+
+  .menu-btn{
+    position: absolute;
+    background: url(./images/menu.png) no-repeat;
+    background-size: 30px;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    right: 0;
+    margin: 0 20px;
+    cursor: pointer; 
+    transition: .4s ease;
+    
+  }
+  .menu-btn.active {
+    z-index: 999;
+    background-image: url(./images/close.png);
+    background-repeat: no-repeat;
+    background-size: 35px;
+    background-position: center;
+    transition: .3s ease;
+    filter: invert(1);
   }
 }
