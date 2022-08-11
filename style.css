@@ -94,7 +94,7 @@ header{
 }
 
 .navbar {
-  background-color: rgba(0,0,0,0.6);
+ 
   padding: 1.2rem;
 }
 
@@ -482,7 +482,10 @@ footer span {
 }
 
 @media only screen and (max-width: 800px){
- 
+
+  .navigation .logo {
+font-size: 15px;
+  }
 
   .navbar-nav i {
     display: block;
