@@ -21,13 +21,9 @@ img {
 
 }
 nav {
-    padding: 10px 2%;
+    padding: 10px 5%;
     justify-content: space-between;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     background-color: #fff;
-    position: sticky;
-    top: 0;
-    z-index: 10;
 }
 .nav-right img {
     width: 25px;
@@ -128,8 +124,8 @@ margin-right: 20px;
 }
 
 .container {
-    width: 70%;
-    margin: auto;
+ max-width: 1240px;
+ margin: 0 auto;
 }
 
 main ul li {
@@ -138,30 +134,59 @@ main ul li {
 
 main ul  {
     display: grid;
-    grid-template-columns: auto  auto  ;
+    grid-template-columns: auto  auto auto   ;
     gap: 10px;
-    background-color: #454545;
     padding: 10px;
     list-style-type: none;
-    
+   
 }
 
 
-main ul li {
+main ul li video {
     margin: 20px;
+
+}
+
+header {
+    width: 100%;
+}
+
+video {
+    width: 350px;
 }
 
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 1072px){
     main ul {
-        margin: 2rem 0;
+  
         display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        gap: 2rem
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem
+        
     }
-    video {
-        width: 250px;
+
+    main ul li video {
         height: auto;
     }
 
+    nav img {
+        margin-right: 100px;
+    }
+
+
+    
+}
+
+@media only screen and (max-width: 750px) {
+    main ul {
+        width: 70%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem
+    }
+
+    
+
+    
 }
